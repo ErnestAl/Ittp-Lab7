@@ -9,3 +9,7 @@ public:
 	virtual ~Service() {};
 };
 
+class Service
+{
+};
+
