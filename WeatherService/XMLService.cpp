@@ -15,9 +15,10 @@ Weather XMLService::getWeather(std::string s)
     double lon = node.child("city").child("coord").attribute("lon").as_double();
     double lat = node.child("city").child("coord").attribute("lat").as_double();
     double temperature = node.child("temperature").attribute("value").as_double();
-    std::string weather = node.child("weather").attribute("value").as_string();
+    std::string weather = node.child("weather").attribute("value").value();
     double windSpeed = node.child("wind").child("speed").attribute("value").as_double();
     int clouds = node.child("clouds").attribute("value").as_int();
     
+
     return Weather(city, lon, lat, temperature, weather, windSpeed, clouds);
 }

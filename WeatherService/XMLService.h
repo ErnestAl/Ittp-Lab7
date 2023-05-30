@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "pugixml.hpp"
 #include "Weather.h"
 #include "Service.h"
